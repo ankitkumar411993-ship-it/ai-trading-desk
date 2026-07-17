@@ -1,0 +1,36 @@
+{
+  "name": "coindcx-ai-desk-backend",
+  "version": "1.0.0",
+  "description": "5-employee AI trading desk backend — Binance Futures scanner, scoring engine, alerts",
+  "main": "dist/index.js",
+  "scripts": {
+    "dev": "ts-node-dev --respawn --transpile-only src/index.ts",
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "migrate": "psql $DATABASE_URL -f ../database/schema.sql"
+  },
+  "dependencies": {
+    "axios": "^1.7.7",
+    "express": "^4.19.2",
+    "ws": "^8.18.0",
+    "pg": "^8.12.0",
+    "ioredis": "^5.4.1",
+    "node-telegram-bot-api": "^0.66.0",
+    "web-push": "^3.6.7",
+    "dotenv": "^16.4.5",
+    "uuid": "^9.0.1",
+    "cors": "^2.8.5"
+  },
+  "devDependencies": {
+    "typescript": "^5.5.4",
+    "ts-node-dev": "^2.0.0",
+    "@types/express": "^4.17.21",
+    "@types/ws": "^8.5.11",
+    "@types/node": "^20.14.10",
+    "@types/uuid": "^9.0.8",
+    "@types/cors": "^2.8.17",
+    "@types/node-telegram-bot-api": "^0.64.7",
+    "@types/pg": "^8.11.6",
+    "@types/web-push": "^3.6.3"
+  }
+}
